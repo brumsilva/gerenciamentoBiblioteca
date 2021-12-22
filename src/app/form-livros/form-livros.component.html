@@ -1,0 +1,48 @@
+<div class="columns">
+  <div class="column coll">
+    <form [formGroup]="form">
+      <div class="field">
+        <label class="label">Nome da Obra:</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" formControlName="name">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Nome do autor:</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" formControlName="author">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Link da Imagem:</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" formControlName="photo">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Gênero:</label>
+        <div class="control">
+          <div class="select">
+            <select formControlName="gender">
+              <option value="Ação">Ação</option>
+              <option value="Empreendedorismo">Empreendedorismo</option>
+              <option value="Romance">Romance</option>
+              <option value="Aventura">Aventura</option>
+            </select>
+          </div>
+        </div>
+      </div>
+        <div class="btn-group">
+          <div *ngIf="verificarStatus;then Cadastrar else Alterar"></div>
+              <ng-template #Cadastrar><button class="button is-primary" (click)="modificar()">Cadastrar</button></ng-template>
+              <ng-template #Alterar>
+                <button class="button is-primary" (click)="modificar()">Alterar</button></ng-template>
+              <button type="reset"class="button is-primary is-light" routerLink="/lista">Cancelar</button>
+        </div>
+    </form>
+  </div>
+
+  <div class="column">
+    <img src="../../assets/img/Library-rafiki.svg">
+  </div>
+</div>

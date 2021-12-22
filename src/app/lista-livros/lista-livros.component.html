@@ -1,0 +1,53 @@
+<div class="container1">
+  <ng-template
+  ngFor let-livro [ngForOf]="livros">
+    <div class="livro">
+      <section class="livro_card">
+        <h2 class="livro_title">{{ livro.name }}</h2>
+
+        <ul>
+          <li>{{livro.gender}}</li>
+        </ul>
+      </section>
+      <section class="livro_img">
+        <img class="livro_img_img"
+        [src]="livro.photo"
+        [alt]="livro.name"
+        style="width: 100px;"
+        >
+      </section>
+      <section class="livro_btn">
+
+        <a class="navbar-item">
+          <span class="icon-text">
+            <span class="icon has-text-primary">
+              <i class="fas fa-pen"></i>
+            </span>
+            <a (click)="editar(livro.id)" class="is-primary"><span class="subtitle has-text-primary"> Editar </span></a>
+          </span>
+        </a>
+        <a class="navbar-item">
+          <span class="icon-text">
+            <span class="icon has-text-danger">
+              <i class="fas fa-trash"></i>
+            </span>
+            <a (click)="mostrarModal(livro.id)"><span class="subtitle is-6 has-text-danger"> Excluir </span></a>
+          </span>
+        </a>
+      </section>
+    </div>
+
+
+  </ng-template>
+
+  <div class="modal-container" *ngIf="isModal">
+    <div class="modal-container-content">
+      <h1 class="title is-4 has-text-light">Tem Certeza que deseja retirar seu livro da lista?</h1>
+      <div class="modal-container-content-btn">
+        <button class="button is-danger" (click)="confirmarAcao()">Excluir!</button>
+      </div>
+      </div>
+  </div>
+
+
+</div>

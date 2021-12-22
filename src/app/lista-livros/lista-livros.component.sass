@@ -1,0 +1,95 @@
+
+.container1
+  display: flex
+  flex-wrap: wrap
+  gap: 30px
+  justify-content: center
+  align-items: center
+  padding: 40px
+
+.livro
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    gap:30px
+    background-color:#fff
+    max-width: 300px
+    height: 432px
+    padding: 10px 20px
+    border-radius: 10px
+    text-decoration: none
+    color: hsl(0, 0%, 21%)
+    box-shadow: 0px 1px 10px hsl(0, 0%, 71%)
+
+    &:hover
+      -webkit-transform: scale3d(1.05, 1.05, 1.05)
+      transform: scale3d(1.05, 1.05, 1.05)
+      box-shadow: 0px 1px 10px hsl(0, 0%, 71%)
+      animation: .9s
+
+    &_card
+      h2
+        font-size: 18px
+        font-style: italic
+        margin-bottom: 10px
+      ul
+        display: flex
+        flex-direction: column
+        li
+          background-color: #efefef
+          font-size: 8px
+          display: flex
+          justify-content: center
+          align-items: center
+          padding: 5px 2px
+          max-width: 100px
+          border-radius: 20px
+          margin-bottom: 8px
+
+    &_btn
+      display: flex
+      gap: 20px
+      justify-content: center
+
+    .livro_img
+      display: flex
+      align-items: center
+      justify-content: center
+      background-image: url('/assets/img/Bolinhas.png')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position-x: right
+      background-position-y: center
+      background-size: contain
+
+
+.modal-container-content
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  background: rgba(39, 36, 36, 0.829)
+  max-width: 950px
+  padding: 15px
+  border-radius: 10px
+  position: absolute
+  padding: 20px
+  bottom: 104px
+  gap: 10px
+  right: 30px
+  // animation: popup-animation
+  h1
+    margin: 0
+
+// @keyframes popup-animation
+//   from
+//     opacity: 0
+//     transform: translate3d(0,-60px,0)
+//   to
+//     opacity: 1
+//     transform: translate3d(0,0,0)
+
+
+
+// .mostrar .modal-content
+//   animation: popup-animation .3s

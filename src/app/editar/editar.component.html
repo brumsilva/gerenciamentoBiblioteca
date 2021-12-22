@@ -1,0 +1,49 @@
+<div class="columns">
+  <div class="column is-half
+  is-offset-one-quarter" style="padding: 40px">
+    <div class="field">
+      <label class="label">Nome da Obra:</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" name="name" [(ngModel)]="livro.name">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Nome do autor:</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" name="author" [(ngModel)]="livro.author">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Link da Imagem:</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" name="photo" [(ngModel)]="livro.photo">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Gênero:</label>
+      <div class="control">
+        <div class="select">
+          <select name="gender" [(ngModel)]="livro.gender">
+            <option value="Ação">Ação</option>
+            <option value="Empreendedorismo">Empreendedorismo</option>
+            <option value="Romance">Romance</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Auto Ajuda"> Auto Ajuda</option>
+            <option value="Programação"> Programação</option>
+          </select>
+          </div>
+      </div>
+    </div>
+
+    <form method="post" class="field is-grouped">
+      <div class="control">
+        <button class="button is-primary" (click)="modificar()">Atualizar</button>
+      </div>
+      <div class="control">
+        <button type="reset"class="button is-primary is-light" routerLink="/lista">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+

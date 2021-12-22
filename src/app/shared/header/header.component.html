@@ -1,0 +1,36 @@
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="/lista">
+      <span class="icon-text">
+        <span class="icon has-text-light">
+          <i class="fas fa-2x fa-book"></i>
+        </span>
+        <h1 class="title is-3 has-text-light">Biblioteca Central </h1>
+      </span>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" routerLink="/lista">
+            <strong>
+              Lista de Livros
+            </strong>
+          </a>
+          <a class="button is-light" routerLink="/add">
+              Adicionar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
